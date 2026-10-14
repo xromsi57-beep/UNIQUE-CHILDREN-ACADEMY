@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="hi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unique Children Academy, Gothra | Khetri Nagar, Jhunjhunu</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#0A2540',
+                            blue: '#1E56A0',
+                            sky: '#0284C7',
+                            gold: '#F59E0B',
+                            yellow: '#FACC15',
+                            accent: '#10B981',
+                            light: '#F8FAFC'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'Noto Sans Devanagari', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .ticker-wrap {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .ticker-move {
+            display: inline-block;
+            animation: ticker 30s linear infinite;
+        }
+        .ticker-wrap:hover .ticker-move {
+            animation-play-state: paused;
+        }
+        @keyframes ticker {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-50%, 0, 0); }
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 28px -10px rgba(10, 37, 64, 0.18);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen selection:bg-brand-gold selection:text-brand-navy">
+
+    <!-- TOP ANNOUNCEMENT & UDISE BAR -->
+    <div class="bg-brand-navy text-white text-xs md:text-sm py-2 px-4 shadow-sm relative z-50">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center gap-2">
+            <div class="flex items-center space-x-2 flex-wrap">
+                <span class="bg-brand-yellow text-brand-navy font-bold px-2 py-0.5 rounded text-xs tracking-wide">UDISE+: 08050600138</span>
+                <span class="bg-emerald-600 text-white font-semibold px-2 py-0.5 rounded text-xs"><i class="fa-solid fa-language mr-1"></i> Hindi & English Medium</span>
+                <span class="text-slate-200 hidden sm:inline"><i class="fa-solid fa-certificate text-brand-yellow mr-1"></i> Recognized Private Unaided Institute</span>
+            </div>
+            
+            <div class="flex items-center space-x-4 text-xs font-medium">
+                <span><i class="fa-solid fa-clock text-brand-yellow mr-1"></i> Mon-Sat: 7:00 AM – 3:00 PM</span>
+                <a href="tel:+919829000000" class="hover:text-brand-yellow transition flex items-center"><i class="fa-solid fa-phone text-brand-yellow mr-1"></i> Helpline</a>
+                <button onclick="openAdmissionModal()" class="bg-brand-gold hover:bg-yellow-500 text-brand-navy font-bold px-3 py-1 rounded transition shadow">
+                    Online Admission 2026-27
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- LIVE MARQUEE / NOTICE TICKER -->
+    <div class="bg-amber-100 border-y border-amber-200 py-1.5 px-4 text-xs text-amber-900 font-medium flex items-center">
+        <span class="bg-brand-navy text-white font-bold px-2.5 py-0.5 rounded text-[11px] uppercase tracking-wider mr-3 flex-shrink-0">
+            <i class="fa-solid fa-bullhorn text-brand-yellow mr-1"></i> Notices
+        </span>
+        <div class="ticker-wrap w-full">
+            <div class="ticker-move">
+                <span class="mx-6"><i class="fa-solid fa-star text-amber-600 mr-1"></i> Admissions open for Class 1 to 8 (Hindi & English Medium) for Session 2026-27!</span>
+                <span class="mx-6"><i class="fa-solid fa-star text-amber-600 mr-1"></i> Periodic Test-1 Schedule published in Academic Calendar section.</span>
+                <span class="mx-6"><i class="fa-solid fa-star text-amber-600 mr-1"></i> New School Bus & Van routes extended to surrounding Gothra and Khetri villages.</span>
+                <span class="mx-6"><i class="fa-solid fa-star text-amber-600 mr-1"></i> Annual Sports Meet coming up this month – Register with physical instructors!</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN NAVIGATION HEADER -->
+    <header class="sticky top-0 z-40 bg-white shadow-md border-b-4 border-brand-yellow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <div class="flex justify-between items-center">
+                
+                <!-- School Brand / Logo -->
+                <a href="#home" class="flex items-center space-x-3 group">
+                    <div class="w-12 h-12 md:w-14 md:h-14 bg-brand-navy rounded-xl flex items-center justify-center text-brand-yellow font-black text-2xl shadow-inner border-2 border-brand-yellow group-hover:scale-105 transition">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl md:text-2xl font-black text-brand-navy tracking-tight leading-none">
+                            UNIQUE CHILDREN ACADEMY
+                        </h1>
+                        <p class="text-xs md:text-sm text-brand-blue font-bold mt-1">
+                            GOTHRA (KHETRI NAGAR), JHUNJHUNU, RAJASTHAN - 333504
+                        </p>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Navigation -->
+                <nav class="hidden lg:flex items-center space-x-5 text-sm font-bold text-brand-navy">
+                    <a href="#home" class="hover:text-brand-blue transition">Home</a>
+                    <a href="#about" class="hover:text-brand-blue transition">About</a>
+                    <a href="#leadership" class="hover:text-brand-blue transition">Leadership</a>
+                    <a href="#academics" class="hover:text-brand-blue transition">Academics & Fee</a>
+                    <a href="#facilities" class="hover:text-brand-blue transition">Facilities</a>
+                    <a href="#gallery" class="hover:text-brand-blue transition">Gallery</a>
+                    <a href="#location" class="hover:text-brand-blue transition">Location</a>
+                    <button onclick="openFeeModal()" class="bg-amber-100 text-amber-900 border border-amber-300 px-3 py-1.5 rounded-lg hover:bg-amber-200 transition text-xs font-bold">
+                        <i class="fa-solid fa-qrcode mr-1"></i> Pay Fee
+                    </button>
+                    <a href="#contact" class="bg-brand-blue text-white px-4 py-2 rounded-lg hover:bg-brand-navy transition shadow text-xs uppercase tracking-wider">
+                        Contact Us
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="lg:hidden text-brand-navy text-2xl p-2 rounded-lg focus:outline-none hover:bg-slate-100">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Dropdown Nav -->
+            <div id="mobile-menu" class="hidden lg:hidden mt-3 pt-3 border-t border-slate-200 flex flex-col space-y-2 pb-2 text-sm font-semibold text-brand-navy">
+                <a href="#home" class="px-3 py-2 rounded hover:bg-slate-100">Home</a>
+                <a href="#about" class="px-3 py-2 rounded hover:bg-slate-100">About School</a>
+                <a href="#leadership" class="px-3 py-2 rounded hover:bg-slate-100">Director & Staff</a>
+                <a href="#academics" class="px-3 py-2 rounded hover:bg-slate-100">Academics, Syllabus & Fee</a>
+                <a href="#facilities" class="px-3 py-2 rounded hover:bg-slate-100">Facilities & Van Routes</a>
+                <a href="#gallery" class="px-3 py-2 rounded hover:bg-slate-100">Photo & Video Gallery</a>
+                <a href="#location" class="px-3 py-2 rounded hover:bg-slate-100">School Location</a>
+                <div class="pt-2 flex flex-col gap-2">
+                    <button onclick="openAdmissionModal()" class="w-full bg-brand-gold text-brand-navy font-bold py-2 rounded text-center">
+                        Online Admission 2026-27
+                    </button>
+                    <button onclick="openFeeModal()" class="w-full bg-emerald-600 text-white font-bold py-2 rounded text-center">
+                        <i class="fa-solid fa-qrcode mr-1"></i> Pay School Fee Online
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO / REAL SCHOOL PHOTO BANNER SECTION -->
+    <section id="home" class="relative bg-brand-navy text-white overflow-hidden py-12 lg:py-20 min-h-[580px] flex items-center">
+        <!-- Hero Real Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img id="heroSchoolImg" src="image_81ad07.jpg" onError="this.onerror=null;this.src='https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1600&q=80';" alt="Unique Children Academy Building Gothra" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/90 to-brand-navy/60"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-8 items-center">
+            
+            <div class="lg:col-span-7 space-y-6">
+                <!-- Yellow Signboard Matching Badge -->
+                <div class="inline-flex items-center space-x-2 bg-brand-yellow text-brand-navy font-black text-sm md:text-xl px-4 py-2 rounded-lg shadow-lg border-2 border-yellow-300 uppercase tracking-wide">
+                    <i class="fa-solid fa-school-flag"></i>
+                    <span>UNIQUE CHILDREN ACADEMY GOTHRA (Khetri Nagar)</span>
+                </div>
+
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight tracking-tight text-white">
+                    Empowering Young Minds with Quality & Moral Education
+                </h2>
+
+                <p class="text-base sm:text-lg text-slate-200 max-w-2xl leading-relaxed">
+                    A premier recognized elementary educational institution in Gothra (Khetri Block, Jhunjhunu). Providing schooling from <strong class="text-brand-yellow">Class 1st to 8th</strong> in both <strong class="text-brand-yellow">Hindi & English Mediums</strong> with disciplined learning, sports, and modern digital classrooms.
+                </p>
+
+                <!-- Action Badges & Buttons -->
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <button onclick="openAdmissionModal()" class="bg-brand-gold hover:bg-yellow-400 text-brand-navy font-extrabold px-6 py-3.5 rounded-xl shadow-xl transition flex items-center space-x-2">
+                        <i class="fa-solid fa-user-plus text-lg"></i>
+                        <span>Apply for Admission</span>
+                    </button>
+                    <a href="#academics" class="bg-white/15 hover:bg-white/25 text-white font-bold px-6 py-3.5 rounded-xl backdrop-blur-md transition border border-white/30 flex items-center space-x-2">
+                        <i class="fa-solid fa-book-open"></i>
+                        <span>Syllabus & Timetable</span>
+                    </a>
+                    <button onclick="openFeeModal()" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-5 py-3.5 rounded-xl shadow-lg transition flex items-center space-x-2">
+                        <i class="fa-solid fa-qrcode"></i>
+                        <span>Online Fee Payment</span>
+                    </button>
+                </div>
+
+                <!-- Quick Highlights Bar -->
+                <div class="pt-6 grid grid-cols-3 gap-4 border-t border-white/20 text-center max-w-lg">
+                    <div>
+                        <p class="text-2xl font-black text-brand-yellow">100%</p>
+                        <p class="text-xs text-slate-300 font-medium">Recognized School</p>
+                    </div>
+                    <div>
+                        <p class="text-2xl font-black text-brand-yellow">Class 1-8</p>
+                        <p class="text-xs text-slate-300 font-medium">Primary & Upper Primary</p>
+                    </div>
+                    <div>
+                        <p class="text-2xl font-black text-brand-yellow">Both</p>
+                        <p class="text-xs text-slate-300 font-medium">Hindi & English Medium</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Campus View Card & Real Image Switcher -->
+            <div class="lg:col-span-5">
+                <div class="glass-panel p-6 rounded-2xl border-2 border-brand-yellow shadow-2xl text-slate-800 space-y-4">
+                    <div class="flex items-center justify-between border-b pb-3 border-slate-200">
+                        <div>
+                            <h3 class="text-lg font-extrabold text-brand-navy">
+                                <i class="fa-solid fa-camera text-brand-blue mr-2"></i>Campus Building View
+                            </h3>
+                            <p class="text-xs text-slate-500">Real Campus Photo — Gothra, Khetri Nagar</p>
+                        </div>
+                        <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-2.5 py-1 rounded-full">Verified</span>
+                    </div>
+
+                    <div class="relative rounded-xl overflow-hidden border border-slate-300 shadow-inner group">
+                        <img id="cardSchoolImg" src="image_81ad07.jpg" onError="this.onerror=null;this.src='https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80';" alt="Unique Children Academy Real Building Photo" class="w-full h-52 object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute bottom-2 left-2 bg-brand-yellow text-brand-navy text-xs font-extrabold px-3 py-1 rounded shadow-md">
+                            UNIQUE CHILDREN ACADEMY GOTHRA
+                        </div>
+                    </div>
+
+                    <!-- Live Image Switcher / Upload Tool -->
+                    <div class="bg-slate-100 p-3 rounded-xl space-y-2 text-xs">
+                        <div class="flex items-center justify-between text-slate-700 font-bold">
+                            <span><i class="fa-solid fa-sliders text-brand-blue mr-1"></i> Live Photo Customizer:</span>
+                            <span class="text-[10px] text-slate-500">Upload or change campus image</span>
+                        </div>
+                        <input type="file" id="imageUploader" accept="image/*" class="w-full text-xs text-slate-600 file:mr-2 file:py-1 file:px-3 file:rounded-md file:border-0 file:text-xs file:font-bold file:bg-brand-blue file:text-white hover:file:bg-brand-navy cursor-pointer">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- DIRECTOR & PRINCIPAL INSPIRATIONAL MESSAGE SECTION -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-brand-navy to-brand-blue rounded-3xl p-6 md:p-10 text-white shadow-xl relative overflow-hidden">
+                <div class="absolute -right-10 -bottom-10 opacity-10 text-9xl">
+                    <i class="fa-solid fa-quote-right"></i>
+                </div>
+                
+                <div class="grid lg:grid-cols-12 gap-8 items-center relative z-10">
+                    <div class="lg:col-span-4 text-center lg:text-left">
+                        <div class="relative inline-block">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80" alt="Director Dheer Singh" class="w-40 h-40 md:w-48 md:h-48 rounded-2xl object-cover border-4 border-brand-yellow shadow-2xl mx-auto">
+                            <span class="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-brand-yellow text-brand-navy font-bold text-xs px-3 py-1 rounded-full shadow">
+                                Director & Principal
+                            </span>
+                        </div>
+                        <h3 class="text-2xl font-black text-white mt-5">Dheer Singh (धीर सिंह)</h3>
+                        <p class="text-xs text-amber-200 font-semibold">Director & Principal | Unique Children Academy</p>
+                        <div class="mt-3 flex justify-center lg:justify-start space-x-2">
+                            <a href="tel:+919829000000" class="bg-white/20 hover:bg-white/30 text-white text-xs px-3 py-1.5 rounded-lg border border-white/20 font-semibold">
+                                <i class="fa-solid fa-phone text-brand-yellow mr-1"></i> Call Director
+                            </a>
+                            <a href="https://wa.me/919829000000?text=Hello%20Director%20Dheer%20Singh%20Ji,%20I%20have%20an%20inquiry%20regarding%20Unique%20Children%20Academy." target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs px-3 py-1.5 rounded-lg font-semibold">
+                                <i class="fa-brands fa-whatsapp mr-1"></i> WhatsApp
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-8 space-y-4">
+                        <div class="inline-block bg-brand-yellow/20 text-brand-yellow text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                            <i class="fa-solid fa-bullseye mr-1"></i> Leadership Message
+                        </div>
+                        <h2 class="text-2xl md:text-3xl font-extrabold text-brand-yellow">
+                            "Building Strong Moral Character & Academic Excellence in Gothra"
+                        </h2>
+                        <p class="text-slate-200 leading-relaxed text-sm md:text-base">
+                            Dear Parents and Students, Welcome to <strong>Unique Children Academy, Gothra</strong>. Our aim is to cultivate a learning environment where children are empowered with knowledge, discipline, and strong moral values. We understand the changing educational requirements of rural and semi-urban Rajasthan, which is why we provide robust instruction in <strong>both Hindi & English mediums</strong> from Class 1 to Class 8.
+                        </p>
+                        <p class="text-slate-200 leading-relaxed text-sm md:text-base">
+                            With dedicated teachers, sports opportunities, and smart digital study tools, we ensure every child in Gothra and nearby villages of Khetri receives top-tier foundation education.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SCHOOL SECTION -->
+    <section id="about" class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-brand-blue font-bold text-xs tracking-widest uppercase">School Overview</span>
+                <h2 class="text-3xl font-black text-brand-navy mt-1">About Unique Children Academy</h2>
+                <div class="w-16 h-1 bg-brand-yellow mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-4 text-slate-700 leading-relaxed text-sm md:text-base">
+                    <p>
+                        <strong>Unique Children Academy</strong> is a recognized private unaided elementary school located in Gothra, within the Khetri block of Jhunjhunu district, Rajasthan (Pincode: 333504).
+                    </p>
+                    <p>
+                        With UDISE+ Code <strong>08050600138</strong>, the institution provides holistic education from <strong>Class 1 to Class 8</strong>. We cater to students seeking instruction in either <strong>Hindi Medium or English Medium</strong>, ensuring conceptual clarity in mathematics, science, language, and social studies.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-4 pt-3">
+                        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-center space-x-3">
+                            <i class="fa-solid fa-graduation-cap text-3xl text-brand-blue"></i>
+                            <div>
+                                <h4 class="font-bold text-brand-navy text-sm">Class 1 to 8</h4>
+                                <p class="text-xs text-slate-500">Primary & Upper Primary</p>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-center space-x-3">
+                            <i class="fa-solid fa-language text-3xl text-emerald-600"></i>
+                            <div>
+                                <h4 class="font-bold text-brand-navy text-sm">Dual Medium</h4>
+                                <p class="text-xs text-slate-500">Hindi & English Medium</p>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-center space-x-3">
+                            <i class="fa-solid fa-bus text-3xl text-amber-500"></i>
+                            <div>
+                                <h4 class="font-bold text-brand-navy text-sm">Transport</h4>
+                                <p class="text-xs text-slate-500">Gothra & Village Routes</p>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-center space-x-3">
+                            <i class="fa-solid fa-clock text-3xl text-brand-gold"></i>
+                            <div>
+                                <h4 class="font-bold text-brand-navy text-sm">Timings</h4>
+                                <p class="text-xs text-slate-500">7:00 AM – 3:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-brand-yellow">
+                    <img id="aboutSchoolImg" src="image_81ad07.jpg" onError="this.onerror=null;this.src='https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80';" alt="Unique Children Academy Building Gothra" class="w-full h-80 object-cover">
+                    <div class="absolute bottom-0 inset-x-0 bg-brand-navy/90 p-3 text-white text-xs font-semibold text-center backdrop-blur-sm">
+                        Unique Children Academy Campus — Gothra, Khetri Nagar (Jhunjhunu)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LEADERSHIP & FACULTY CARDS SECTION -->
+    <section id="leadership" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-brand-blue font-bold text-xs tracking-widest uppercase">School Administration</span>
+                <h2 class="text-3xl font-black text-brand-navy mt-1">Director, Headmaster & Counselors</h2>
+                <p class="text-slate-600 text-sm mt-1">Experienced educators guiding Unique Children Academy.</p>
+                <div class="w-16 h-1 bg-brand-yellow mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- DIRECTOR CARD -->
+                <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-64 bg-slate-200">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80" alt="Director Dheer Singh Photo" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-brand-navy via-brand-navy/80 to-transparent p-4 text-white">
+                                <span class="bg-brand-yellow text-brand-navy font-extrabold text-[11px] px-2.5 py-0.5 rounded">Director & Principal</span>
+                                <h3 class="text-xl font-bold mt-1">Dheer Singh</h3>
+                                <p class="text-xs text-amber-200 font-medium">धीर सिंह (Director)</p>
+                            </div>
+                        </div>
+                        <div class="p-5 space-y-3 text-xs text-slate-600">
+                            <p class="flex items-center"><i class="fa-solid fa-user-tie w-6 text-brand-blue text-sm"></i> <span><strong>Role:</strong> School Director & Principal</span></p>
+                            <p class="flex items-center"><i class="fa-solid fa-graduation-cap w-6 text-brand-blue text-sm"></i> <span><strong>Qualification:</strong> M.A., B.Ed.</span></p>
+                            <p class="flex items-center"><i class="fa-solid fa-briefcase w-6 text-brand-blue text-sm"></i> <span><strong>Experience:</strong> 15+ Years in School Management</span></p>
+                            <p class="pt-2 text-slate-700 italic border-t border-slate-200">
+                                "Dedicated to moral values, quality instruction in both mediums, and character development."
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0 space-y-2">
+                        <a href="tel:+919829000000" class="w-full bg-brand-navy hover:bg-brand-blue text-white font-bold text-center py-2.5 rounded-lg text-xs transition flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>Call Director Dheer Singh</span>
+                        </a>
+                        <a href="https://wa.me/919829000000?text=Hello%20Director%20Dheer%20Singh%20Ji" target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-center py-2 rounded-lg text-xs transition flex items-center justify-center space-x-2">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span>WhatsApp Director</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- HEADMASTER CARD -->
+                <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-64 bg-slate-200">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Headmaster Nandlal Photo" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-brand-navy via-brand-navy/80 to-transparent p-4 text-white">
+                                <span class="bg-brand-yellow text-brand-navy font-extrabold text-[11px] px-2.5 py-0.5 rounded">Headmaster</span>
+                                <h3 class="text-xl font-bold mt-1">Nandlal</h3>
+                                <p class="text-xs text-amber-200 font-medium">नंदलाल (Headmaster)</p>
+                            </div>
+                        </div>
+                        <div class="p-5 space-y-3 text-xs text-slate-600">
+                            <p class="flex items-center"><i class="fa-solid fa-user-check w-6 text-brand-blue text-sm"></i> <span><strong>Role:</strong> Academic Headmaster</span></p>
+                            <p class="flex items-center"><i class="fa-solid fa-graduation-cap w-6 text-brand-blue text-sm"></i> <span><strong>Qualification:</strong> B.Sc., B.Ed.</span></p>
+                            <p class="flex items-center"><i class="fa-solid fa-briefcase w-6 text-brand-blue text-sm"></i> <span><strong>Experience:</strong> 12+ Years Teaching Experience</span></p>
+                            <p class="pt-2 text-slate-700 italic border-t border-slate-200">
+                                "Focusing on daily classroom discipline, curriculum progression, and regular parent communication."
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0 space-y-2">
+                        <a href="tel:+919829000001" class="w-full bg-brand-navy hover:bg-brand-blue text-white font-bold text-center py-2.5 rounded-lg text-xs transition flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>Call Headmaster Nandlal</span>
+                        </a>
+                        <a href="https://wa.me/919829000001?text=Hello%20Headmaster%20Nandlal%20Ji" target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-center py-2 rounded-lg text-xs transition flex items-center justify-center space-x-2">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span>WhatsApp Headmaster</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- COUNSELOR CARD -->
+                <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-64 bg-slate-200">
+                            <img src="https://images.unsplash.com/photo-1580894732413-a704936a3f5f?auto=format&fit=crop&w=600&q=80" alt="Counselor Rajesh Kumar Photo" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-brand-navy via-brand-navy/80 to-transparent p-4 text-white">
+                                <span class="bg-brand-yellow text-brand-navy font-extrabold text-[11px] px-2.5 py-0.5 rounded">Academic Counselor</span>
+                                <h3 class="text-xl font-bold mt-1">Rajesh Kumar</h3>
+                                <p class="text-xs text-amber-200 font-medium">राजेश कुमार (Counselor)</p>
+                            </div>
+                        </div>
+                        <div class="p-5 space-y-3 text-xs text-slate-600">
+                            <p class="flex items-center"><i class="fa-solid fa-comments w-6 text-brand-blue text-sm"></i> <span><strong>Role:</strong> Academic & Career Counselor</span></p>
+                            <p class="flex items-center"><i class="fa-solid fa-graduation-cap w-6 text-brand-blue text-sm"></i> <span><strong>Qualification:</strong> M.A. Psychology, B.Ed.</span></p>
+                            <p class="flex items-center"><i class="fa-solid fa-briefcase w-6 text-brand-blue text-sm"></i> <span><strong>Experience:</strong> 10+ Years Student Guidance</span></p>
+                            <p class="pt-2 text-slate-700 italic border-t border-slate-200">
+                                "Guiding students through study techniques, confidence building, and emotional well-being."
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0 space-y-2">
+                        <a href="tel:+919829000002" class="w-full bg-brand-navy hover:bg-brand-blue text-white font-bold text-center py-2.5 rounded-lg text-xs transition flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>Call Counselor</span>
+                        </a>
+                        <a href="https://wa.me/919829000002?text=Hello%20Counselor%20Rajesh%20Ji" target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-center py-2 rounded-lg text-xs transition flex items-center justify-center space-x-2">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span>WhatsApp Counselor</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ACADEMICS, SYLLABUS, TIMETABLE & FEE CALCULATOR -->
+    <section id="academics" class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-brand-blue font-bold text-xs tracking-widest uppercase">Academic Corner</span>
+                <h2 class="text-3xl font-black text-brand-navy mt-1">Class Syllabus, Timetable & Fee Structure</h2>
+                <div class="w-16 h-1 bg-brand-yellow mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <!-- Tab Navigation for Academics -->
+            <div class="flex justify-center mb-8">
+                <div class="bg-white p-1.5 rounded-xl shadow-sm border border-slate-200 inline-flex flex-wrap gap-2 text-xs font-bold">
+                    <button id="btn-syllabus" onclick="switchAcademicTab('syllabus')" class="px-5 py-2.5 rounded-lg bg-brand-navy text-white transition">
+                        <i class="fa-solid fa-book-open mr-1.5"></i> Class 1-8 Syllabus
+                    </button>
+                    <button id="btn-timetable" onclick="switchAcademicTab('timetable')" class="px-5 py-2.5 rounded-lg text-slate-600 hover:text-brand-navy transition">
+                        <i class="fa-solid fa-calendar-days mr-1.5"></i> School Timetable
+                    </button>
+                    <button id="btn-fee" onclick="switchAcademicTab('fee')" class="px-5 py-2.5 rounded-lg text-slate-600 hover:text-brand-navy transition">
+                        <i class="fa-solid fa-calculator mr-1.5"></i> Fee Structure & Online Pay
+                    </button>
+                    <button id="btn-calendar" onclick="switchAcademicTab('calendar')" class="px-5 py-2.5 rounded-lg text-slate-600 hover:text-brand-navy transition">
+                        <i class="fa-solid fa-calendar-check mr-1.5"></i> Holidays & Calendar
+                    </button>
+                </div>
+            </div>
+
+            <!-- TAB 1: SYLLABUS & BOOK LIST -->
+            <div id="tab-syllabus" class="bg-white p-6 md:p-8 rounded-2xl border border-slate-200 shadow-md space-y-6">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b pb-4 border-slate-200">
+                    <div>
+                        <h3 class="text-xl font-bold text-brand-navy">Class Curriculum & Subjects (1st to 8th)</h3>
+                        <p class="text-xs text-slate-500">Available for Hindi Medium and English Medium streams.</p>
+                    </div>
+                    <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full">Both Mediums</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-brand-navy">Classes 1 & 2</span>
+                            <span class="bg-blue-100 text-blue-800 text-[10px] font-bold px-2 py-0.5 rounded">Primary</span>
+                        </div>
+                        <ul class="text-xs text-slate-600 space-y-1 pt-1">
+                            <li><i class="fa-solid fa-check text-emerald-500 mr-1.5"></i> Hindi & Hindi Grammar</li>
+                            <li><i class="fa-solid fa-check text-emerald-500 mr-1.5"></i> English Reader & Grammar</li>
+                            <li><i class="fa-solid fa-check text-emerald-500 mr-1.5"></i> Mathematics & Tables</li>
+                            <li><i class="fa-solid fa-check text-emerald-500 mr-1.5"></i> Environmental Studies (EVS)</li>
+                            <li><i class="fa-solid fa-check text-emerald-500 mr-1.5"></i> Drawing & Moral Values</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-brand-navy">Classes 3 to 5</span>
+                            <span class="bg-blue-100 text-blue-800 text-[10px] font-bold px-2 py-0.5 rounded">Primary</span>
+                        </div>
+                        <ul class="text-xs text-slate-600 space-y-1 pt-1">
+                            <li><i class="fa-solid fa-check text-emerald-500 mr-1.5"></i> Hindi (हिंदी पल्लव)</li>
+                            <li><i class="fa-solid fa-check text-emerald-500 mr-1.5"></i> English (Honey Suckle)</li>
+                            <li><i class="fa-solid fa-check text-emerald-500 mr-1.5"></i> Mathematics (गणित)</li>
+                            <li><i class="fa-solid fa-check text-emerald-500 mr-1.5"></i> General Science (पर्यावरण)</li>
+                            <li><i class="fa-solid fa-check text-emerald-500 mr-1.5"></i> Computer & GK Basics</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-brand-navy">Classes 6 & 7</span>
+                            <span class="bg-amber-100 text-amber-800 text-[10px] font-bold px-2 py-0.5 rounded">Upper Primary</span>
+                        </div>
+                        <ul class="text-xs text-slate-600 space-y-1 pt-1">
+                            <li><i class="fa-solid fa-check text-emerald-500 mr-1.5"></i> Hindi, English & Sanskrit</li>
+                            <li><i class="fa-solid fa-check text-emerald-500 mr-1.5"></i> Mathematics (Algebra & Geometry)</li>
+                            <li><i class="fa-solid fa-check text-emerald-500 mr-1.5"></i> Science & Experiments</li>
+                            <li><i class="fa-solid fa-check text-emerald-500 mr-1.5"></i> Social Science (SST)</li>
+                            <li><i class="fa-solid fa-check text-emerald-500 mr-1.5"></i> Computer Science & Sports</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-brand-navy">Class 8</span>
+                            <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded">Board Class</span>
+                        </div>
+                        <ul class="text-xs text-slate-600 space-y-1 pt-1">
+                            <li><i class="fa-solid fa-check text-emerald-500 mr-1.5"></i> Board Pattern Curriculum</li>
+                            <li><i class="fa-solid fa-check text-emerald-500 mr-1.5"></i> Physics, Chemistry & Bio Basics</li>
+                            <li><i class="fa-solid fa-check text-emerald-500 mr-1.5"></i> Advanced Mathematics</li>
+                            <li><i class="fa-solid fa-check text-emerald-500 mr-1.5"></i> SST, Civics & Geography</li>
+                            <li><i class="fa-solid fa-check text-emerald-500 mr-1.5"></i> Sanskrit, Hindi & English</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Uniform Details -->
+                <div class="p-4 bg-amber-50 rounded-xl border border-amber-200 text-xs text-amber-900 space-y-2">
+                    <h4 class="font-bold text-sm text-brand-navy"><i class="fa-solid fa-shirt mr-1.5 text-brand-gold"></i> School Uniform & Dress Code:</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        <p><strong>Summer Uniform:</strong> White Shirt, Navy Blue Trousers/Skirt, School Tie, Black Shoes, Navy Socks.</p>
+                        <p><strong>Winter Uniform:</strong> Navy Blue Blazer/Sweater with School Logo, Full Sleeves Shirt.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 2: TIMETABLE -->
+            <div id="tab-timetable" class="hidden bg-white p-6 md:p-8 rounded-2xl border border-slate-200 shadow-md space-y-6">
+                <div class="flex justify-between items-center border-b pb-4 border-slate-200">
+                    <div>
+                        <h3 class="text-xl font-bold text-brand-navy">Daily School Operational Schedule</h3>
+                        <p class="text-xs text-slate-500">Monday to Saturday: 7:00 AM to 3:00 PM</p>
+                    </div>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded-full">Mon-Sat</span>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-xs border-collapse">
+                        <thead>
+                            <tr class="bg-brand-navy text-white font-bold">
+                                <th class="p-3 rounded-tl-lg">Time Slot</th>
+                                <th class="p-3">Period / Activity</th>
+                                <th class="p-3">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200 text-slate-700">
+                            <tr class="bg-slate-50 font-semibold">
+                                <td class="p-3 text-brand-blue">07:00 AM - 07:30 AM</td>
+                                <td class="p-3">Morning Assembly & Prayer</td>
+                                <td class="p-3">National Anthem, Daily News, Gayatri Mantra & PT Exercise</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-semibold">07:30 AM - 08:15 AM</td>
+                                <td class="p-3 font-bold text-brand-navy">1st Period</td>
+                                <td class="p-3">Mathematics / Mental Ability</td>
+                            </tr>
+                            <tr class="bg-slate-50">
+                                <td class="p-3 font-semibold">08:15 AM - 09:00 AM</td>
+                                <td class="p-3 font-bold text-brand-navy">2nd Period</td>
+                                <td class="p-3">English Reader & Grammar</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-semibold">09:00 AM - 09:45 AM</td>
+                                <td class="p-3 font-bold text-brand-navy">3rd Period</td>
+                                <td class="p-3">Hindi / Hindi Vyakaran</td>
+                            </tr>
+                            <tr class="bg-amber-100 font-bold text-amber-900">
+                                <td class="p-3">09:45 AM - 10:15 AM</td>
+                                <td class="p-3"><i class="fa-solid fa-utensils mr-1"></i> Lunch & Recess Break</td>
+                                <td class="p-3">Mid-Day Refreshment & Playground Rest</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-semibold">10:15 AM - 11:00 AM</td>
+                                <td class="p-3 font-bold text-brand-navy">4th Period</td>
+                                <td class="p-3">General Science / EVS</td>
+                            </tr>
+                            <tr class="bg-slate-50">
+                                <td class="p-3 font-semibold">11:00 AM - 11:45 AM</td>
+                                <td class="p-3 font-bold text-brand-navy">5th Period</td>
+                                <td class="p-3">Social Studies (SST) & Sanskrit</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-semibold">11:45 AM - 12:30 PM</td>
+                                <td class="p-3 font-bold text-brand-navy">6th Period</td>
+                                <td class="p-3">Computer Lab / Smart Class Session</td>
+                            </tr>
+                            <tr class="bg-slate-50">
+                                <td class="p-3 font-semibold">12:30 PM - 01:15 PM</td>
+                                <td class="p-3 font-bold text-brand-navy">7th Period</td>
+                                <td class="p-3">Drawing, Moral Values & GK</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-semibold">01:15 PM - 02:00 PM</td>
+                                <td class="p-3 font-bold text-brand-navy">8th Period</td>
+                                <td class="p-3">Sports, Kho-Kho, Cricket & Outdoor Games</td>
+                            </tr>
+                            <tr class="bg-slate-100 font-bold text-brand-navy">
+                                <td class="p-3">02:00 PM - 03:00 PM</td>
+                                <td class="p-3">Homework Diary & Dismissal</td>
+                                <td class="p-3">Day Wrap-up, Bus Boarding & Departure</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- TAB 3: FEE STRUCTURE & ONLINE PAY MODAL -->
+            <div id="tab-fee" class="hidden bg-white p-6 md:p-8 rounded-2xl border border-slate-200 shadow-md space-y-6">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b pb-4 border-slate-200">
+                    <div>
+                        <h3 class="text-xl font-bold text-brand-navy">Affordable Annual Fee Structure</h3>
+                        <p class="text-xs text-slate-500">Transparent & affordable fee schedule for session 2026-27.</p>
+                    </div>
+                    <button onclick="openFeeModal()" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs px-4 py-2 rounded-lg shadow">
+                        <i class="fa-solid fa-qrcode mr-1"></i> Pay Online via UPI / QR
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-3">
+                        <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2.5 py-1 rounded">Classes 1 to 3</span>
+                        <h4 class="text-2xl font-black text-brand-navy">₹600 <span class="text-xs text-slate-500 font-normal">/ month</span></h4>
+                        <ul class="text-xs text-slate-600 space-y-1.5 pt-2 border-t">
+                            <li><i class="fa-solid fa-check text-emerald-500 mr-1.5"></i> Tuition Fee included</li>
+                            <li><i class="fa-solid fa-check text-emerald-500 mr-1.5"></i> Examination Fee included</li>
+                            <li><i class="fa-solid fa-check text-emerald-500 mr-1.5"></i> Sports & Activity Access</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-slate-50 p-5 rounded-2xl border-2 border-brand-yellow space-y-3 relative">
+                        <span class="absolute -top-3 right-4 bg-brand-yellow text-brand-navy text-[10px] font-black px-2.5 py-0.5 rounded-full uppercase">Most Popular</span>
+                        <span class="bg-amber-100 text-amber-800 text-xs font-bold px-2.5 py-1 rounded">Classes 4 & 5</span>
+                        <h4 class="text-2xl font-black text-brand-navy">₹750 <span class="text-xs text-slate-500 font-normal">/ month</span></h4>
+                        <ul class="text-xs text-slate-600 space-y-1.5 pt-2 border-t">
+                            <li><i class="fa-solid fa-check text-emerald-500 mr-1.5"></i> Tuition & Lab Access</li>
+                            <li><i class="fa-solid fa-check text-emerald-500 mr-1.5"></i> Computer Practice Classes</li>
+                            <li><i class="fa-solid fa-check text-emerald-500 mr-1.5"></i> Exam & Library Card</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-3">
+                        <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-2.5 py-1 rounded">Classes 6 to 8</span>
+                        <h4 class="text-2xl font-black text-brand-navy">₹900 <span class="text-xs text-slate-500 font-normal">/ month</span></h4>
+                        <ul class="text-xs text-slate-600 space-y-1.5 pt-2 border-t">
+                            <li><i class="fa-solid fa-check text-emerald-500 mr-1.5"></i> Complete Academic Fee</li>
+                            <li><i class="fa-solid fa-check text-emerald-500 mr-1.5"></i> Science Experiment Kit Access</li>
+                            <li><i class="fa-solid fa-check text-emerald-500 mr-1.5"></i> Board Pattern Test Series</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 4: CALENDAR & HOLIDAYS -->
+            <div id="tab-calendar" class="hidden bg-white p-6 md:p-8 rounded-2xl border border-slate-200 shadow-md space-y-6">
+                <div class="border-b pb-4 border-slate-200">
+                    <h3 class="text-xl font-bold text-brand-navy">Academic Calendar & List of Holidays (2026-27)</h3>
+                    <p class="text-xs text-slate-500">Key exam schedules, vacation periods, and school events.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs">
+                    <div class="space-y-3">
+                        <h4 class="font-bold text-sm text-brand-blue flex items-center">
+                            <i class="fa-solid fa-calendar-star mr-2 text-brand-gold"></i> Examination Schedule
+                        </h4>
+                        <div class="space-y-2">
+                            <div class="p-3 bg-slate-50 rounded-lg border border-slate-200 flex justify-between">
+                                <span class="font-bold text-brand-navy">Periodic Test - 1</span>
+                                <span class="text-slate-600 font-medium">July 2026</span>
+                            </div>
+                            <div class="p-3 bg-slate-50 rounded-lg border border-slate-200 flex justify-between">
+                                <span class="font-bold text-brand-navy">Half Yearly Exams</span>
+                                <span class="text-slate-600 font-medium">October 2026</span>
+                            </div>
+                            <div class="p-3 bg-slate-50 rounded-lg border border-slate-200 flex justify-between">
+                                <span class="font-bold text-brand-navy">Periodic Test - 2</span>
+                                <span class="text-slate-600 font-medium">December 2026</span>
+                            </div>
+                            <div class="p-3 bg-slate-50 rounded-lg border border-slate-200 flex justify-between">
+                                <span class="font-bold text-brand-navy">Annual Board & Final Exams</span>
+                                <span class="text-slate-600 font-medium">March 2027</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <h4 class="font-bold text-sm text-brand-blue flex items-center">
+                            <i class="fa-solid fa-umbrella-beach mr-2 text-brand-gold"></i> Vacations & Important Holidays
+                        </h4>
+                        <div class="space-y-2">
+                            <div class="p-3 bg-amber-50 rounded-lg border border-amber-200 flex justify-between text-amber-900">
+                                <span class="font-bold">Summer Vacation</span>
+                                <span>May 15 to June 30</span>
+                            </div>
+                            <div class="p-3 bg-amber-50 rounded-lg border border-amber-200 flex justify-between text-amber-900">
+                                <span class="font-bold">Deepawali Holidays</span>
+                                <span>October / November (10 Days)</span>
+                            </div>
+                            <div class="p-3 bg-amber-50 rounded-lg border border-amber-200 flex justify-between text-amber-900">
+                                <span class="font-bold">Winter Vacation</span>
+                                <span>December 25 to January 5</span>
+                            </div>
+                            <div class="p-3 bg-slate-50 rounded-lg border border-slate-200 flex justify-between text-slate-700">
+                                <span class="font-bold">National Days (Independence & Republic)</span>
+                                <span>August 15 & January 26</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- STAR STUDENTS / TOPPERS WALL OF FAME -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-brand-blue font-bold text-xs tracking-widest uppercase">Wall of Fame</span>
+                <h2 class="text-3xl font-black text-brand-navy mt-1">Our Top Performing Students</h2>
+                <p class="text-slate-600 text-sm mt-1">Celebrating academic excellence and hard work at Unique Children Academy.</p>
+                <div class="w-16 h-1 bg-brand-yellow mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div class="bg-gradient-to-b from-amber-50 to-white p-6 rounded-2xl border border-amber-200 shadow-md text-center card-hover relative overflow-hidden">
+                    <span class="absolute top-3 right-3 bg-brand-yellow text-brand-navy text-[10px] font-black px-2 py-0.5 rounded-full">Rank 1</span>
+                    <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=300&q=80" class="w-20 h-20 rounded-full mx-auto object-cover border-2 border-brand-yellow shadow">
+                    <h3 class="font-bold text-brand-navy text-base mt-3">Priya Saini</h3>
+                    <p class="text-xs text-brand-blue font-semibold">Class 8th Board Topper</p>
+                    <p class="text-2xl font-black text-amber-600 mt-2">96.8%</p>
+                    <p class="text-[11px] text-slate-500 mt-1">Hindi Medium</p>
+                </div>
+
+                <div class="bg-gradient-to-b from-amber-50 to-white p-6 rounded-2xl border border-amber-200 shadow-md text-center card-hover relative overflow-hidden">
+                    <span class="absolute top-3 right-3 bg-brand-yellow text-brand-navy text-[10px] font-black px-2 py-0.5 rounded-full">Rank 1</span>
+                    <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=300&q=80" class="w-20 h-20 rounded-full mx-auto object-cover border-2 border-brand-yellow shadow">
+                    <h3 class="font-bold text-brand-navy text-base mt-3">Aarav Sharma</h3>
+                    <p class="text-xs text-brand-blue font-semibold">Class 8th Board Topper</p>
+                    <p class="text-2xl font-black text-amber-600 mt-2">95.4%</p>
+                    <p class="text-[11px] text-slate-500 mt-1">English Medium</p>
+                </div>
+
+                <div class="bg-gradient-to-b from-amber-50 to-white p-6 rounded-2xl border border-amber-200 shadow-md text-center card-hover relative overflow-hidden">
+                    <span class="absolute top-3 right-3 bg-slate-200 text-slate-800 text-[10px] font-black px-2 py-0.5 rounded-full">Rank 2</span>
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=300&q=80" class="w-20 h-20 rounded-full mx-auto object-cover border-2 border-slate-300 shadow">
+                    <h3 class="font-bold text-brand-navy text-base mt-3">Kavya Shekhawat</h3>
+                    <p class="text-xs text-brand-blue font-semibold">Class 7th Topper</p>
+                    <p class="text-2xl font-black text-slate-700 mt-2">94.2%</p>
+                    <p class="text-[11px] text-slate-500 mt-1">English Medium</p>
+                </div>
+
+                <div class="bg-gradient-to-b from-amber-50 to-white p-6 rounded-2xl border border-amber-200 shadow-md text-center card-hover relative overflow-hidden">
+                    <span class="absolute top-3 right-3 bg-slate-200 text-slate-800 text-[10px] font-black px-2 py-0.5 rounded-full">Rank 2</span>
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" class="w-20 h-20 rounded-full mx-auto object-cover border-2 border-slate-300 shadow">
+                    <h3 class="font-bold text-brand-navy text-base mt-3">Rohan Kumar</h3>
+                    <p class="text-xs text-brand-blue font-semibold">Class 5th Topper</p>
+                    <p class="text-2xl font-black text-slate-700 mt-2">93.8%</p>
+                    <p class="text-[11px] text-slate-500 mt-1">Hindi Medium</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SCHOOL FACILITIES & TRANSPORT ROUTES -->
+    <section id="facilities" class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-brand-blue font-bold text-xs tracking-widest uppercase">School Infrastructure</span>
+                <h2 class="text-3xl font-black text-brand-navy mt-1">Our Facilities & Transport Routes</h2>
+                <div class="w-16 h-1 bg-brand-yellow mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3 card-hover">
+                    <div class="w-12 h-12 bg-blue-100 text-brand-blue rounded-xl flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-brand-navy">Smart Classrooms</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Digital projector-enabled learning sessions for Science, Mathematics, and Languages to make concepts easy to grasp.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3 card-hover">
+                    <div class="w-12 h-12 bg-amber-100 text-amber-700 rounded-xl flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-brand-navy">Computer Lab & Library</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Equipped computer lab for early digital literacy, alongside a rich collection of children's storybooks and encyclopedias.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3 card-hover">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-xl flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-futbol"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-brand-navy">Playground & Sports</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Spacious open sports ground for Cricket, Kho-Kho, Volleyball, Badminton, and daily physical exercises.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Transport Bus Routes Card -->
+            <div class="mt-10 bg-brand-navy text-white p-6 md:p-8 rounded-2xl shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="space-y-2 max-w-2xl">
+                    <div class="inline-block bg-brand-yellow text-brand-navy text-xs font-black px-2.5 py-0.5 rounded uppercase">
+                        <i class="fa-solid fa-bus mr-1"></i> School Transport Facility
+                    </div>
+                    <h3 class="text-2xl font-bold text-white">Safe Van & Bus Routes in Gothra & Surrounding Area</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Daily pick-and-drop available across Gothra, Khetri Nagar, Babai road, Jasrapur turn, and surrounding villages. Equipped with experienced drivers and staff.
+                    </p>
+                </div>
+                <button onclick="openAdmissionModal()" class="bg-brand-yellow hover:bg-yellow-400 text-brand-navy font-extrabold px-6 py-3 rounded-xl text-xs transition shadow flex-shrink-0">
+                    Inquire Van Seat
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHOTO & VIDEO GALLERY -->
+    <section id="gallery" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-brand-blue font-bold text-xs tracking-widest uppercase">Campus Life</span>
+                <h2 class="text-3xl font-black text-brand-navy mt-1">Photo & Event Gallery</h2>
+                <p class="text-slate-600 text-sm mt-1">Glimpses of activities, sports, and functions at Unique Children Academy.</p>
+                <div class="w-16 h-1 bg-brand-yellow mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="group relative rounded-2xl overflow-hidden shadow-md border border-slate-200">
+                    <img src="image_81ad07.jpg" onError="this.onerror=null;this.src='https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=600&q=80';" class="w-full h-56 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent p-4 flex flex-col justify-end text-white">
+                        <span class="text-[10px] bg-brand-yellow text-brand-navy font-bold px-2 py-0.5 rounded w-max">Campus View</span>
+                        <h4 class="font-bold text-sm mt-1">School Main Building Gothra</h4>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-2xl overflow-hidden shadow-md border border-slate-200">
+                    <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=600&q=80" class="w-full h-56 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent p-4 flex flex-col justify-end text-white">
+                        <span class="text-[10px] bg-brand-yellow text-brand-navy font-bold px-2 py-0.5 rounded w-max">Classroom</span>
+                        <h4 class="font-bold text-sm mt-1">Interactive Learning Sessions</h4>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-2xl overflow-hidden shadow-md border border-slate-200">
+                    <img src="https://images.unsplash.com/photo-1526976668912-1a811878dd37?auto=format&fit=crop&w=600&q=80" class="w-full h-56 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent p-4 flex flex-col justify-end text-white">
+                        <span class="text-[10px] bg-brand-yellow text-brand-navy font-bold px-2 py-0.5 rounded w-max">Sports Day</span>
+                        <h4 class="font-bold text-sm mt-1">Annual Sports & Athletic Meet</h4>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-2xl overflow-hidden shadow-md border border-slate-200">
+                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80" class="w-full h-56 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent p-4 flex flex-col justify-end text-white">
+                        <span class="text-[10px] bg-brand-yellow text-brand-navy font-bold px-2 py-0.5 rounded w-max">Cultural</span>
+                        <h4 class="font-bold text-sm mt-1">Annual Cultural Function</h4>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-2xl overflow-hidden shadow-md border border-slate-200">
+                    <img src="https://images.unsplash.com/photo-1567168544813-cc03465b4fa8?auto=format&fit=crop&w=600&q=80" class="w-full h-56 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent p-4 flex flex-col justify-end text-white">
+                        <span class="text-[10px] bg-brand-yellow text-brand-navy font-bold px-2 py-0.5 rounded w-max">Exhibition</span>
+                        <h4 class="font-bold text-sm mt-1">Science & Craft Exhibition</h4>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-2xl overflow-hidden shadow-md border border-slate-200">
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=600&q=80" class="w-full h-56 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent p-4 flex flex-col justify-end text-white">
+                        <span class="text-[10px] bg-brand-yellow text-brand-navy font-bold px-2 py-0.5 rounded w-max">Celebration</span>
+                        <h4 class="font-bold text-sm mt-1">Republic Day Parade & Honors</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PARENTS TESTIMONIALS -->
+    <section class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-brand-blue font-bold text-xs tracking-widest uppercase">Parents Feedback</span>
+                <h2 class="text-3xl font-black text-brand-navy mt-1">What Parents Say About Us</h2>
+                <div class="w-16 h-1 bg-brand-yellow mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3 text-xs">
+                    <div class="flex text-brand-yellow space-x-1 text-sm">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed italic">
+                        "Unique Children Academy, Gothra is the best school for foundational education. My son improved greatly in English reading and mathematics under Director Dheer Singh Sir's guidance."
+                    </p>
+                    <div class="pt-2 border-t">
+                        <strong class="text-brand-navy text-sm block">Ramesh Saini</strong>
+                        <span class="text-slate-400">Parent, Gothra</span>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3 text-xs">
+                    <div class="flex text-brand-yellow space-x-1 text-sm">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed italic">
+                        "Having both Hindi and English medium options in our own Gothra village is a big relief. School staff and Headmaster Nandlal Ji are very supportive."
+                    </p>
+                    <div class="pt-2 border-t">
+                        <strong class="text-brand-navy text-sm block">Sunita Kanwar</strong>
+                        <span class="text-slate-400">Parent, Khetri Nagar</span>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3 text-xs">
+                    <div class="flex text-brand-yellow space-x-1 text-sm">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed italic">
+                        "The school van facility is very punctual and safe. Sports and cultural celebrations give complete personality development to our children."
+                    </p>
+                    <div class="pt-2 border-t">
+                        <strong class="text-brand-navy text-sm block">Mahipal Singh</strong>
+                        <span class="text-slate-400">Parent, Jasrapur Road</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCATION MAP SECTION -->
+    <section id="location" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-brand-blue font-bold text-xs tracking-widest uppercase">School Address</span>
+                <h2 class="text-3xl font-black text-brand-navy mt-1">Visit Our Campus in Gothra</h2>
+                <div class="w-16 h-1 bg-brand-yellow mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-8 items-stretch">
+                <div class="lg:col-span-5 bg-slate-50 p-6 md:p-8 rounded-2xl border border-slate-200 shadow-md flex flex-col justify-between space-y-6">
+                    <div class="space-y-4 text-xs md:text-sm text-slate-700">
+                        <h3 class="text-lg font-bold text-brand-navy flex items-center">
+                            <i class="fa-solid fa-map-location-dot text-brand-blue mr-2"></i> Address & Details
+                        </h3>
+                        <p class="flex items-start"><i class="fa-solid fa-school text-brand-gold mt-1 w-6"></i> <span><strong>School:</strong> Unique Children Academy</span></p>
+                        <p class="flex items-start"><i class="fa-solid fa-location-dot text-brand-gold mt-1 w-6"></i> <span><strong>Address:</strong> Gothra, Khetri Nagar, Jhunjhunu, Rajasthan</span></p>
+                        <p class="flex items-start"><i class="fa-solid fa-map-pin text-brand-gold mt-1 w-6"></i> <span><strong>Pincode:</strong> 333504</span></p>
+                        <p class="flex items-start"><i class="fa-solid fa-hashtag text-brand-gold mt-1 w-6"></i> <span><strong>UDISE+ Code:</strong> 08050600138</span></p>
+                        <p class="flex items-start"><i class="fa-solid fa-clock text-brand-gold mt-1 w-6"></i> <span><strong>Hours:</strong> Mon – Sat: 7:00 AM – 3:00 PM</span></p>
+                    </div>
+
+                    <a href="https://maps.google.com/?q=Gothra+Khetri+Nagar+Jhunjhunu+Rajasthan+333504" target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 rounded-xl text-center text-xs transition shadow flex items-center justify-center space-x-2">
+                        <i class="fa-solid fa-directions"></i>
+                        <span>Open Directions in Google Maps</span>
+                    </a>
+                </div>
+
+                <div class="lg:col-span-7 bg-slate-100 rounded-2xl border border-slate-200 overflow-hidden shadow-md min-h-[350px]">
+                    <iframe 
+                        title="Unique Children Academy Gothra Google Map"
+                        class="w-full h-full min-h-[350px] border-0"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14138.643329188172!2d75.7725!3d28.0015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39133a8241940a43%3A0xc4ebbc9b0e1b6f0!2sGothra%2C%20Rajasthan%20333504!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT FORM & FOOTER -->
+    <section id="contact" class="py-16 bg-brand-navy text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12">
+                
+                <div class="lg:col-span-6 space-y-6">
+                    <div>
+                        <span class="text-brand-yellow font-bold text-xs tracking-widest uppercase">Get In Touch</span>
+                        <h2 class="text-3xl font-black text-white mt-1">Contact Unique Children Academy</h2>
+                        <div class="w-16 h-1 bg-brand-yellow mt-3 rounded-full"></div>
+                    </div>
+
+                    <div class="space-y-3 text-xs text-slate-300">
+                        <p class="flex items-center"><i class="fa-solid fa-user-tie text-brand-yellow w-6 text-sm"></i> <span><strong>Director:</strong> Dheer Singh (धीर सिंह)</span></p>
+                        <p class="flex items-center"><i class="fa-solid fa-user-check text-brand-yellow w-6 text-sm"></i> <span><strong>Headmaster:</strong> Nandlal (नंदलाल)</span></p>
+                        <p class="flex items-center"><i class="fa-solid fa-phone text-brand-yellow w-6 text-sm"></i> <span><strong>Phone Helpline:</strong> +91 98290 XXXXX / +91 94140 XXXXX</span></p>
+                        <p class="flex items-center"><i class="fa-solid fa-envelope text-brand-yellow w-6 text-sm"></i> <span><strong>Email ID:</strong> uniqueacademygothra@gmail.com</span></p>
+                        <p class="flex items-center"><i class="fa-solid fa-location-dot text-brand-yellow w-6 text-sm"></i> <span><strong>Location:</strong> Gothra, Khetri Nagar, Jhunjhunu (333504)</span></p>
+                    </div>
+
+                    <div class="pt-4 flex flex-wrap gap-3">
+                        <a href="tel:+919829000000" class="bg-brand-yellow hover:bg-yellow-400 text-brand-navy font-bold px-4 py-2.5 rounded-lg text-xs transition flex items-center space-x-2">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>Call Office</span>
+                        </a>
+                        <a href="https://wa.me/919829000000" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-2.5 rounded-lg text-xs transition flex items-center space-x-2">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span>Direct WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Contact / Inquiry Form -->
+                <div class="lg:col-span-6 bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 space-y-4 text-slate-800">
+                    <h3 class="text-xl font-bold text-brand-yellow">Send Message / Inquiry</h3>
+                    <form id="contactForm" class="space-y-3 text-xs">
+                        <div>
+                            <label class="block text-slate-200 font-semibold mb-1">Your Full Name</label>
+                            <input type="text" required placeholder="Enter name" class="w-full px-3 py-2 rounded-lg text-slate-800 focus:outline-none focus:ring-2 focus:ring-brand-yellow">
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div>
+                                <label class="block text-slate-200 font-semibold mb-1">Mobile Number</label>
+                                <input type="tel" required placeholder="10-digit number" class="w-full px-3 py-2 rounded-lg text-slate-800 focus:outline-none focus:ring-2 focus:ring-brand-yellow">
+                            </div>
+                            <div>
+                                <label class="block text-slate-200 font-semibold mb-1">Student Class</label>
+                                <select class="w-full px-3 py-2 rounded-lg text-slate-800 focus:outline-none focus:ring-2 focus:ring-brand-yellow bg-white">
+                                    <option>Class 1</option><option>Class 2</option><option>Class 3</option><option>Class 4</option>
+                                    <option>Class 5</option><option>Class 6</option><option>Class 7</option><option>Class 8</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-slate-200 font-semibold mb-1">Message</label>
+                            <textarea rows="2" placeholder="Write your query..." class="w-full px-3 py-2 rounded-lg text-slate-800 focus:outline-none focus:ring-2 focus:ring-brand-yellow"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-brand-yellow hover:bg-yellow-400 text-brand-navy font-bold py-2.5 rounded-lg text-xs transition shadow">
+                            Submit Message
+                        </button>
+                    </form>
+                    <div id="contactSuccess" class="hidden p-2 bg-emerald-500/20 text-emerald-300 rounded text-center text-xs">
+                        Thank you! Your message has been received.
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-12 pt-6 border-t border-white/10 text-center text-xs text-slate-400 flex flex-col sm:flex-row justify-between items-center gap-2">
+                <p>&copy; 2026 Unique Children Academy, Gothra (Khetri Nagar). All Rights Reserved.</p>
+                <p class="text-brand-yellow font-mono">UDISE+ Code: 08050600138</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/919829000000?text=Hello%20Unique%20Children%20Academy%20Gothra,%20I%20have%20an%20inquiry." target="_blank" class="fixed bottom-6 right-6 z-50 bg-emerald-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-2xl hover:bg-emerald-600 hover:scale-110 transition duration-300 animate-bounce">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- MODAL 1: ONLINE ADMISSION FORM -->
+    <div id="admissionModal" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-lg w-full p-6 space-y-4 relative shadow-2xl max-h-[90vh] overflow-y-auto">
+            <button onclick="closeAdmissionModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-800 text-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="border-b pb-2">
+                <span class="bg-brand-yellow text-brand-navy font-black text-[10px] px-2 py-0.5 rounded">Session 2026-27</span>
+                <h3 class="text-xl font-bold text-brand-navy mt-1">Online Admission Registration Form</h3>
+                <p class="text-xs text-slate-500">Unique Children Academy, Gothra (Khetri Nagar)</p>
+            </div>
+
+            <form id="admissionForm" class="space-y-3 text-xs">
+                <div>
+                    <label class="block font-semibold text-slate-700 mb-1">Student's Full Name *</label>
+                    <input type="text" required placeholder="Enter student name" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue">
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block font-semibold text-slate-700 mb-1">Father's Name *</label>
+                        <input type="text" required placeholder="Father name" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue">
+                    </div>
+                    <div>
+                        <label class="block font-semibold text-slate-700 mb-1">Mother's Name *</label>
+                        <input type="text" required placeholder="Mother name" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue">
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block font-semibold text-slate-700 mb-1">Mobile Number *</label>
+                        <input type="tel" required placeholder="10-digit mobile" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue">
+                    </div>
+                    <div>
+                        <label class="block font-semibold text-slate-700 mb-1">Seeking Class *</label>
+                        <select class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue bg-white">
+                            <option>Class 1</option><option>Class 2</option><option>Class 3</option><option>Class 4</option>
+                            <option>Class 5</option><option>Class 6</option><option>Class 7</option><option>Class 8</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label class="block font-semibold text-slate-700 mb-1">Medium Preference *</label>
+                    <select class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue bg-white">
+                        <option>Hindi Medium</option>
+                        <option>English Medium</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block font-semibold text-slate-700 mb-1">Village / Address *</label>
+                    <input type="text" required placeholder="Gothra / Village name" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue">
+                </div>
+                <div>
+                    <label class="block font-semibold text-slate-700 mb-1">Attach Marksheet / Aadhar Photo (Optional)</label>
+                    <input type="file" class="w-full text-slate-500 file:mr-2 file:py-1 file:px-3 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-slate-100">
+                </div>
+                <button type="submit" class="w-full bg-brand-navy hover:bg-brand-blue text-white font-bold py-2.5 rounded-lg text-xs transition shadow">
+                    Submit Registration Form
+                </button>
+            </form>
+            <div id="admSuccess" class="hidden p-3 bg-emerald-100 text-emerald-800 rounded text-center text-xs font-semibold">
+                Registration details received! School staff will contact you shortly.
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 2: ONLINE FEE PAYMENT QR SIMULATION -->
+    <div id="feeModal" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-sm w-full p-6 space-y-4 relative shadow-2xl text-center">
+            <button onclick="closeFeeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-800 text-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="space-y-1">
+                <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded">UPI Fee Portal</span>
+                <h3 class="text-xl font-black text-brand-navy">Pay School Fee Online</h3>
+                <p class="text-xs text-slate-500">Scan QR Code using PhonePe, Google Pay, or Paytm</p>
+            </div>
+
+            <!-- Simulated QR Code Container -->
+            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 inline-block shadow-inner">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=upi://pay?pa=uniqueacademy@upi%26pn=Unique%20Children%20Academy%26cu=INR" alt="UPI Fee Payment QR Code" class="w-44 h-44 mx-auto rounded">
+                <p class="text-[11px] text-slate-500 mt-2 font-mono">UPI ID: uniqueacademy@upi</p>
+            </div>
+
+            <div class="text-xs text-slate-600 space-y-2 text-left bg-amber-50 p-3 rounded-lg border border-amber-200">
+                <p class="font-bold text-amber-900"><i class="fa-solid fa-circle-info mr-1"></i> Note after Payment:</p>
+                <p>Please send screenshot of payment with Student Name & Class to WhatsApp helpline <strong>+91 98290 XXXXX</strong> for instant fee receipt.</p>
+            </div>
+
+            <button onclick="closeFeeModal()" class="w-full bg-brand-navy text-white font-bold py-2 rounded-lg text-xs">
+                Close Payment Screen
+            </button>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC FOR INTERACTIVITY & CANVAS STATE -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Dynamic Real Photo Customizer / Uploader
+        const imageUploader = document.getElementById('imageUploader');
+        imageUploader.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    const imgSrc = event.target.result;
+                    document.getElementById('heroSchoolImg').src = imgSrc;
+                    document.getElementById('cardSchoolImg').src = imgSrc;
+                    document.getElementById('aboutSchoolImg').src = imgSrc;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Academic Tab Switcher
+        function switchAcademicTab(tab) {
+            const tabs = ['syllabus', 'timetable', 'fee', 'calendar'];
+            tabs.forEach(t => {
+                const content = document.getElementById('tab-' + t);
+                const btn = document.getElementById('btn-' + t);
+                if (t === tab) {
+                    content.classList.remove('hidden');
+                    btn.className = "px-5 py-2.5 rounded-lg bg-brand-navy text-white transition shadow";
+                } else {
+                    content.classList.add('hidden');
+                    btn.className = "px-5 py-2.5 rounded-lg text-slate-600 hover:text-brand-navy transition";
+                }
+            });
+        }
+
+        // Admission Modal Controls
+        function openAdmissionModal() {
+            document.getElementById('admissionModal').classList.remove('hidden');
+        }
+        function closeAdmissionModal() {
+            document.getElementById('admissionModal').classList.add('hidden');
+        }
+
+        // Fee Payment Modal Controls
+        function openFeeModal() {
+            document.getElementById('feeModal').classList.remove('hidden');
+        }
+        function closeFeeModal() {
+            document.getElementById('feeModal').classList.add('hidden');
+        }
+
+        // Admission Form Handler
+        document.getElementById('admissionForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            document.getElementById('admissionForm').reset();
+            const msg = document.getElementById('admSuccess');
+            msg.classList.remove('hidden');
+            setTimeout(() => {
+                msg.classList.add('hidden');
+                closeAdmissionModal();
+            }, 3000);
+        });
+
+        // Contact Form Handler
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            document.getElementById('contactForm').reset();
+            const msg = document.getElementById('contactSuccess');
+            msg.classList.remove('hidden');
+            setTimeout(() => {
+                msg.classList.add('hidden');
+            }, 4000);
+        });
+    </script>
+</body>
+</html>
